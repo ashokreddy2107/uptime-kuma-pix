@@ -4,7 +4,6 @@ import visualizer from "rollup-plugin-visualizer";
 import viteCompression from "vite-plugin-compression";
 import { VitePWA } from "vite-plugin-pwa";
 
-// We use require for these as they are likely CommonJS modules in your environment
 const postCssScss = require("postcss-scss");
 const postcssRTLCSS = require("postcss-rtlcss");
 
@@ -45,10 +44,19 @@ export default defineConfig({
     css: {
         preprocessorOptions: {
             scss: {
-                // This tells Sass to look in node_modules for @import statements
+                api: 'modern-compiler',
                 loadPaths: ["node_modules"],
-                // This silences the "legacy API" warning and uses the modern compiler logic
-                api: 'modern-compiler' 
+                // --- SILENCE DEPRECATION WARNINGS ---
+                quietDeps: true,
+                silenceDeprecations: [
+                    'import', 
+                    'global-builtin', 
+                    'color-functions', 
+                    'abs-percent', 
+                    'function-units', 
+                    'if-function'
+                ],
+                // ------------------------------------
             },
         },
         postcss: {
@@ -64,7 +72,7 @@ export default defineConfig({
         rollupOptions: {
             output: {
                 manualChunks(id) {
-                    // Custom chunking logic can go here if needed
+                    // Custom chunking logic
                 }
             }
         },
