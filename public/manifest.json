@@ -1,0 +1,83 @@
+{
+    "name": "pixelvide status page",
+    "short_name": "pixelvide",
+    "description": "pixelvide status page",
+    "theme_color": "#5cdd8b",
+    "start_url": "/",
+    "background_color": "#fff",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "https://pixelvide.com/images/loader.webp",
+            "sizes": "any",
+            "type": "image/webp"
+        }
+    ],
+    "shortcuts": [
+        {
+            "name": "Dashboard",
+            "short_name": "Dashboard",
+            "description": "View monitoring dashboard",
+            "url": "/dashboard",
+            "icons": [
+                {
+                    "src": "https://pixelvide.com/images/loader.webp",
+                    "sizes": "any",
+                    "type": "image/webp"
+                }
+            ]
+        },
+        {
+            "name": "Add Monitor",
+            "short_name": "Add Monitor",
+            "description": "Add a new monitor",
+            "url": "/add",
+            "icons": [
+                {
+                    "src": "https://pixelvide.com/images/loader.webp",
+                    "sizes": "any",
+                    "type": "image/webp"
+                }
+            ]
+        },
+        {
+            "name": "Monitor List",
+            "short_name": "List",
+            "description": "View all monitors",
+            "url": "/list",
+            "icons": [
+                {
+                    "src": "https://pixelvide.com/images/loader.webp",
+                    "sizes": "any",
+                    "type": "image/webp"
+                }
+            ]
+        },
+        {
+            "name": "Settings",
+            "short_name": "Settings",
+            "description": "Open settings",
+            "url": "/settings",
+            "icons": [
+                {
+                    "src": "https://pixelvide.com/images/loader.webp",
+                    "sizes": "any",
+                    "type": "image/webp"
+                }
+            ]
+        },
+        {
+            "name": "Maintenance",
+            "short_name": "Maintenance",
+            "description": "Manage maintenance windows",
+            "url": "/maintenance",
+            "icons": [
+                {
+                    "src": "https://pixelvide.com/images/loader.webp",
+                    "sizes": "any",
+                    "type": "image/webp"
+                }
+            ]
+        }
+    ]
+}
